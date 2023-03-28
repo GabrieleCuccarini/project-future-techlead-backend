@@ -1,0 +1,22 @@
+@import '~bootstrap/scss/bootstrap';
+
+.set-heigth {
+    height: 100px;
+}
+
+.bg-dark {
+    background-color: black !important;
+}
+
+.collapse.navbar-collapse > * {
+    font-size: 20px;
+}
+
+.asp-ratio {
+    aspect-ratio: 1 / 1;
+}
+
+.home-jumbo {
+    width: 95vw;
+    height: 95vh;
+}
