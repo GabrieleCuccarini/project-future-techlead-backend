@@ -15,7 +15,8 @@ class PerfumeController extends Controller
      */
     public function index()
     {
-        $perfumes = Perfume::all();
+        //RIPORTA NEL FRONT SOLO I PROFUMI ATTIVI
+        $perfumes = Perfume::where('show', '=', 1)->get();
         return response()->json($perfumes);
     }
 

@@ -22,7 +22,7 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <div class="container">
+            <div class="container-fluid px-5">
                 <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
                     <div>
                         <img class="set-heigth" src="{{ asset('storage/' . 'logo/futuretechlead.jpg')}}" alt="logo">
@@ -41,7 +41,7 @@
                         </li>
                         
                         <li class="nav-item">
-                            <b><a class="nav-link text-white" href="{{ url('perfumes')}}">{{ __('Shop') }}</a></b>
+                            <b><a class="nav-link text-white" href="{{ url('perfumes')}}">{{ __('Perfumes') }}</a></b>
                         </li>
                     </ul>
 

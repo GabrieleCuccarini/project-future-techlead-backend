@@ -39,6 +39,7 @@
                             </div>
                         </div>
 
+                        
                         <div class="mb-4 row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }} *</label>
 
@@ -52,15 +53,22 @@
                                 @enderror
                             </div>
                         </div>
-
+                        
                         <div class="mb-4 row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }} *</label>
-
+                            
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
 
+                        <div class="mb-4 row">
+                            <div class="form-check form-switch m-left">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Are you an Admin?</label>
+                                <input onclick="checkboxClicked()" class="form-check-input checked" type="checkbox" name="admin" role="switch" id="flexSwitchCheckDefault">
+                            </div>
+                        </div>
+                        
                         <div class="mb-4 row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -74,4 +82,16 @@
         </div>
     </div>
 </div>
+
+<script>
+
+function checkboxClicked() {
+  let checkBox = document.getElementById("flexSwitchCheckDefault");
+  if (checkBox.checked == true){
+    checkBox.value = 1; // Imposta il valore a true
+  } else {
+    checkBox.value = 0; // Imposta il valore a false
+  }
+}
+</script>
 @endsection
