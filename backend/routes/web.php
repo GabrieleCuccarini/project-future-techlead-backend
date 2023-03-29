@@ -31,7 +31,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware(['auth'])->prefix('admin')->group(function () {
-    Route::get("/perfumes", [PerfumeController::class, "index"])->name('perfumes.index');
     Route::get("/perfumes/create", [PerfumeController::class, "create"])->name('perfumes.create');
     Route::get("/perfumes/{slug}", [PerfumeController::class, "show"])->name('perfumes.show');
     Route::get('/perfumes/{slug}/edit', [PerfumeController::class, 'edit'])->name('perfumes.edit');
@@ -39,5 +38,8 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::delete('/perfumes/{slug}', [PerfumeController::class, 'destroy'])->name('perfumes.destroy');
     Route::post("/perfumes", [PerfumeController::class, "store"])->name('perfumes.store');
 });
+
+Route::get("/perfumes", [PerfumeController::class, "index"])->name('perfumes.index');
+
 
 require __DIR__.'/auth.php';

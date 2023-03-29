@@ -3,8 +3,8 @@
 @section('content')
     <main class="container-fluid vh-100">
 
+        @isset ( Auth::user()->isAdmin )
         <div class="container-fluid ">
-
             <button class="btn bg-warning m-3 text-start">
                 <a href="{{route('dashboard.index')}}" class="text-decoration-none text-white">
                     Back to Dashboard
@@ -12,14 +12,15 @@
             </button>
             <button class="btn btn-success text-center"> 
                 <a href="{{route('perfumes.create')}}" class="text-decoration-none text-white">
-                    Aggiungi un profumo
+                    Add a Perfume
                 </a>
             </button>
         </div>
+        @endisset
         
         <div class="row mx-5">
             @if(count($perfumes) > 0)
-            <h1 class='green-text'>Profumi Abilitati</h1>
+            <h1 class='mt-1'>Active Perfumes</h1>
             @foreach ( $perfumes as $perfume )
                 @if($perfume->show == 1)
                     
@@ -34,7 +35,7 @@
                                         <h5 class="card-title text-center"><b></b></h5>
                                         <p class="card-text"><b class='text-grey'>Brand: </b>{{$perfume->brand}}</p>
                                         <p class="card-text"><b class='text-grey'>Quantity: </b>{{$perfume->quantity}} ml</p>
-                                        <p class="card-text"><b class='text-grey'>Price: <span class='text-danger'>€{{$perfume->price}}</span></b></p>
+                                        <p class="card-text"><b>Price: <span class='text-danger'>€{{$perfume->price}}</span></b></p>
                                         <p><b class='text-grey'>Show: </b>{{$perfume->show == true ? 'on' : 'off'}}</p>
                                     </div>
                                     <div class="card-body d-flex justify-content-evenly">
@@ -54,7 +55,7 @@
                 @endif
             @endforeach
             
-            <h1 class='green-text'>Profumi Disabilitati</h1>
+            <h1 class='mt-1'>Disactive Perfumes</h1>
             @foreach ( $perfumes as $perfume )
                 @if($perfume->show == 0)
                 <div class="my-3 col-xl-3 col-lg-4 col-md-6 col-sm-10">
@@ -68,7 +69,7 @@
                                         <h5 class="card-title text-center"><b></b></h5>
                                         <p class="card-text"><b class='text-grey'>Brand: </b>{{$perfume->brand}}</p>
                                         <p class="card-text"><b class='text-grey'>Quantity: </b>{{$perfume->quantity}} ml</p>
-                                        <p class="card-text"><b class='text-grey'>Price: <span class='text-danger'>€{{$perfume->price}}</span></b></p>
+                                        <p class="card-text"><b>Price: <span class='text-danger'>€{{$perfume->price}}</span></b></p>
                                         <p><b class='text-grey'>Show: </b>{{$perfume->show == true ? 'on' : 'off'}}</p>
                                     </div>
                                     <div class="card-body d-flex justify-content-evenly">

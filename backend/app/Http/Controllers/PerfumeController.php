@@ -22,9 +22,6 @@ class PerfumeController extends Controller
         public function index()
         {
             $user = Auth::user();
-            if ($user->isAdmin == 0) {
-                abort(403);
-            }
             $perfumes = Perfume::all();
             // dd($perfumes);
             return view('perfumes.index', compact('perfumes'));

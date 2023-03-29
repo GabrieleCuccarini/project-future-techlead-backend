@@ -108,18 +108,18 @@
 
                 {{-- HIDE --}}
                 <div class="form-check form-switch m-left">
-                    <label class="form-check-label" for="flexSwitchCheckDefault">Mostra</label>
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Show</label>
                     <input onclick="checkboxClicked()" class="form-check-input checked" type="checkbox" name="show" role="switch" id="flexSwitchCheckDefault">
                 </div>
 
 
         {{-- PULSANTI: SUBMIT E BACK TO DASHBOARD --}}
                 <div class="col-12">
-                    <button type="submit" class="btn btn-success">Salva</button>
+                    <button type="submit" class="btn btn-success">Submit</button>
 
                     <button class="btn bg-warning m-3">
                         <a href="{{route('perfumes.index')}}" class="text-decoration-none text-white">
-                            Torna ai Piatti/Menu
+                            Back to Perfumes
                         </a>
                     </button>
                 </div>
