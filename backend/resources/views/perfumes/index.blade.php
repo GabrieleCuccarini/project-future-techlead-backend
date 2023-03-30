@@ -3,7 +3,7 @@
 @section('content')
     <main class="container-fluid vh-100">
 
-        @isset ( Auth::user()->isAdmin )
+        @if ( Auth::user()->isAdmin == 1 )
         <div class="container-fluid ">
             <button class="btn bg-warning m-3 text-start">
                 <a href="{{route('dashboard.index')}}" class="text-decoration-none text-white">
@@ -16,11 +16,11 @@
                 </a>
             </button>
         </div>
-        @endisset
+        @endif
         
         <div class="row mx-5">
             @if(count($perfumes) > 0)
-            <h1 class='mt-1'>Active Perfumes</h1>
+            <h1 class='mt-2'>Active Perfumes</h1>
             @foreach ( $perfumes as $perfume )
                 @if($perfume->show == 1)
                     
@@ -38,15 +38,19 @@
                                         <p class="card-text"><b>Price: <span class='text-danger'>€{{$perfume->price}}</span></b></p>
                                         <p><b class='text-grey'>Show: </b>{{$perfume->show == true ? 'on' : 'off'}}</p>
                                     </div>
+                                    @if ( Auth::user()->isAdmin == 1 )
                                     <div class="card-body d-flex justify-content-evenly">
-                                        <button class="btn btn-success text-white border-0"> <a href="{{route('perfumes.edit', $perfume->slug)}}" class="text-decoration-none text-white">Modifica</a></button>
+                                        <button class="btn btn-primary text-white border-0"> <a href="{{route('perfumes.show', $perfume->slug)}}" class="text-decoration-none text-white">Open</a></button>
+
+                                        <button class="btn btn-success text-white border-0"> <a href="{{route('perfumes.edit', $perfume->slug)}}" class="text-decoration-none text-white">Edit</a></button>
 
                                         <form action="{{ route('perfumes.destroy', $perfume->slug) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
-                                            <button class=" btn btn-danger text-white border-0" type="submit" onclick="return confirm('Sei sicuro di voler eliminare questo profumo?')">Elimina</button>
+                                            <button class=" btn btn-danger text-white border-0" type="submit" onclick="return confirm('Sei sicuro di voler eliminare questo profumo?')">Delete</button>
                                         </form>
                                     </div>
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -72,15 +76,19 @@
                                         <p class="card-text"><b>Price: <span class='text-danger'>€{{$perfume->price}}</span></b></p>
                                         <p><b class='text-grey'>Show: </b>{{$perfume->show == true ? 'on' : 'off'}}</p>
                                     </div>
+                                    @if ( Auth::user()->isAdmin == 1 )
                                     <div class="card-body d-flex justify-content-evenly">
-                                        <button class="btn btn-success text-white border-0"> <a href="{{route('perfumes.edit', $perfume->slug)}}" class="text-decoration-none text-white">Modifica</a></button>
+                                        <button class="btn btn-primary text-white border-0"> <a href="{{route('perfumes.show', $perfume->slug)}}" class="text-decoration-none text-white">Open</a></button>
+
+                                        <button class="btn btn-success text-white border-0"> <a href="{{route('perfumes.edit', $perfume->slug)}}" class="text-decoration-none text-white">Edit</a></button>
 
                                         <form action="{{ route('perfumes.destroy', $perfume->slug) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
-                                            <button class=" btn btn-danger text-white border-0" type="submit" onclick="return confirm('Sei sicuro di voler eliminare questo profumo?')">Elimina</button>
+                                            <button class=" btn btn-danger text-white border-0" type="submit" onclick="return confirm('Sei sicuro di voler eliminare questo profumo?')">Delete</button>
                                         </form>
                                     </div>
+                                    @endif
                                 </div>
                             </div>
                         </div>

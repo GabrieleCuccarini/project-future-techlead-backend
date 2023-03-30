@@ -25,12 +25,12 @@
 
                             <div class="d-flex justify-content-evenly align-items-center mb-2">
                                 <button class="btn btn-info"> <a href="{{ route('perfumes.edit', $perfume->slug) }}"
-                                        class="text-decoration-none">Modifica</a></button>
+                                        class="text-decoration-none text-white">Edit</a></button>
 
                                     <form action="{{ route('perfumes.destroy', $perfume->id) }}" method="POST" id='form-delete'>
                                         @csrf
                                         @method('DELETE')
-                                        <button class=" btn btn-danger text-white border-0" type="submit" onclick="return confirm('Sei sicuro di voler eliminare questo profumo?')">Elimina</button>
+                                        <button class=" btn btn-danger text-white border-0" type="submit" onclick="return confirm('Sei sicuro di voler eliminare questo profumo?')">Delete</button>
                                     </form>
                                 </form>
                             </div>

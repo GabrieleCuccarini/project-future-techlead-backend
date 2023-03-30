@@ -46,7 +46,7 @@
 
                     {{-- INPUT IMMAGINE --}}
                     <div class="col-md-6">
-                        <label for="" class="form-label">Immagine di copertina</label>
+                        <label for="" class="form-label">Cover Image</label>
                         <input type="file"
                             class="form-control @error('cover_img') is-invalid @elseif('cover_img')  @enderror"
                             name="cover_img">
@@ -115,7 +115,7 @@
                     </div>
 
                     <div class="form-check form-switch m-left">
-                        <label class="form-check-label" for="flexSwitchCheckDefault">Mostra</label>
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Show</label>
                         <input onclick="checkboxClicked()" value='{{ $perfume->show }}' class="form-check-input"
                             type="checkbox" name="show" role="switch" id="flexSwitchCheckDefault"
                             {{ $perfume->show == 0 ? '' : 'checked' }}>
@@ -123,11 +123,11 @@
 
                     {{-- PULSANTI: SUBMIT E BACK TO DASHBOARD --}}
                     <div class="col-12">
-                        <button type="submit" class="btn btn-success">Salva</button>
+                        <button type="submit" class="btn btn-success">Submit</button>
 
                         <button class="btn btn-warning m-3">
                             <a href="{{ route('perfumes.index') }}" class="text-decoration-none text-white">
-                                Torna ai Piatti/Menu
+                                Back to Perfumes
                             </a>
                         </button>
                     </div>

@@ -3,12 +3,12 @@
     <div class="container">
         <div class="d-flex justify-content-between align-items-center">
             <div>
-                <h3 class="fs-4 green-text my-4">Benvenuto <strong> {{ Auth::user()->username }}</h3>
+                <h3 class="fs-4 green-text mt-4">Welcome <strong> {{ Auth::user()->username }}</h3>
             </div>
+            @if ( Auth::user()->isAdmin == 1 )
             <div class="dropdown">
-                <button class="btn btn-success dropdown-toggle fw-bold" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Azioni
+                <button class="btn btn-success dropdown-toggle fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Actions
                 </button>
 
                 <div class="dropdown-menu bg-success">
@@ -21,15 +21,16 @@
                         Add a Perfume
                     </a>
                 </div>
-            </div>        
+            </div>    
+            @endif    
         </div>
 
     </div>
 
     <div class="row justify-content-center">
         <div class="col-lg-8 col-md-8 col-sm-6">
-            <div class="card mt-5 bg-success text-white me-3">
-                <div class="card-header fw-bold">{{ __('I Tuoi Dati') }}</div>
+            <div class="card mt-4 bg-success text-white me-3">
+                <div class="card-header fw-bold">{{ __('Your Profile Info') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -42,7 +43,7 @@
                         <thead class="text-warning">
                             <tr>
                                 <th>ID</th>
-                                <th>Userame</th>
+                                <th>Username</th>
                                 <th>Email</th>
                                 <th>Role</th>
                             </tr>
