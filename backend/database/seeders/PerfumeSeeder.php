@@ -18,7 +18,7 @@ class PerfumeSeeder extends Seeder
             [   
                 "name" => "Eternity Moment",    
                 "cover_img" => "perfume/ck-eternitymoment.jpg",    
-                "brand" => "CK",
+                "brand_id" => 1,
                 "quantity" => 120,
                 "price" => "25.99",
                 "show" => true,         
@@ -26,7 +26,7 @@ class PerfumeSeeder extends Seeder
             [   
                 "name" => "BE",    
                 "cover_img" => "perfume/ck-be.jpg",    
-                "brand" => "CK",
+                "brand_id" => 1,
                 "quantity" => 120,
                 "price" => "34.99",
                 "show" => true,         
@@ -34,7 +34,7 @@ class PerfumeSeeder extends Seeder
             [   
                 "name" => "In2u",    
                 "cover_img" => "perfume/ck-in2u.jpg",    
-                "brand" => "CK",
+                "brand_id" => 1,
                 "quantity" => 100,
                 "price" => "45.99",
                 "show" => false,         
@@ -42,7 +42,7 @@ class PerfumeSeeder extends Seeder
             [   
                 "name" => "One",    
                 "cover_img" => "perfume/ck-one.jpg",    
-                "brand" => "CK",
+                "brand_id" => 1,
                 "quantity" => 150,
                 "price" => "60.99",
                 "show" => false,         
@@ -50,7 +50,7 @@ class PerfumeSeeder extends Seeder
             [   
                 "name" => "Everyone",    
                 "cover_img" => "perfume/ck-everyone.jpg",    
-                "brand" => "CK",
+                "brand_id" => 1,
                 "quantity" => 100,
                 "price" => "48.75",
                 "show" => true,         
@@ -58,7 +58,7 @@ class PerfumeSeeder extends Seeder
             [   
                 "name" => "Summer Daze",    
                 "cover_img" => "perfume/ck-summerdaze.jpg",    
-                "brand" => "CK",
+                "brand_id" => 1,
                 "quantity" => 80,
                 "price" => "26.99",
                 "show" => false,         
@@ -66,7 +66,7 @@ class PerfumeSeeder extends Seeder
             [   
                 "name" => "Euphoria",    
                 "cover_img" => "perfume/ck-euphoria.jpg",    
-                "brand" => "CK",
+                "brand_id" => 1,
                 "quantity" => 120,
                 "price" => "36.99",
                 "show" => true,         
@@ -74,7 +74,7 @@ class PerfumeSeeder extends Seeder
             [   
                 "name" => "Obsession",    
                 "cover_img" => "perfume/ck-obsession.jpg",    
-                "brand" => "CK",
+                "brand_id" => 1,
                 "quantity" => 150,
                 "price" => "80.98",
                 "show" => true,         
@@ -82,7 +82,7 @@ class PerfumeSeeder extends Seeder
             [   
                 "name" => "Free",    
                 "cover_img" => "perfume/ck-free.jpg",    
-                "brand" => "CK",
+                "brand_id" => 1,
                 "quantity" => 120,
                 "price" => "37.49",
                 "show" => true,         
@@ -90,7 +90,7 @@ class PerfumeSeeder extends Seeder
             [   
                 "name" => "One gold",    
                 "cover_img" => "perfume/ck-onegold.jpg",    
-                "brand" => "CK",
+                "brand_id" => 1,
                 "quantity" => 100,
                 "price" => "70.29",
                 "show" => true,         
@@ -98,7 +98,7 @@ class PerfumeSeeder extends Seeder
             [   
                 "name" => "SI",    
                 "cover_img" => "perfume/armani-si.jpg",    
-                "brand" => "Armani",
+                "brand_id" => 2,
                 "quantity" => 50,
                 "price" => "29.99",
                 "show" => true,         
@@ -106,7 +106,7 @@ class PerfumeSeeder extends Seeder
             [   
                 "name" => "Acqua di Giò",    
                 "cover_img" => "perfume/armani-acquadigio.jpg",    
-                "brand" => "Armani",
+                "brand_id" => 2,
                 "quantity" => 120,
                 "price" => "34.99",
                 "show" => true,         
@@ -114,7 +114,7 @@ class PerfumeSeeder extends Seeder
             [   
                 "name" => "Acqua di Gioia",    
                 "cover_img" => "perfume/armani-acquadigioia.jpg",    
-                "brand" => "Armani",
+                "brand_id" => 2,
                 "quantity" => 100,
                 "price" => "48.77",
                 "show" => false,         
@@ -122,7 +122,7 @@ class PerfumeSeeder extends Seeder
             [   
                 "name" => "Ocean di Gioia",    
                 "cover_img" => "perfume/armani-oceandigioia.jpg",    
-                "brand" => "Armani",
+                "brand_id" => 2,
                 "quantity" => 150,
                 "price" => "60.99",
                 "show" => false,         
@@ -130,7 +130,7 @@ class PerfumeSeeder extends Seeder
             [   
                 "name" => "Terra di Gioia",    
                 "cover_img" => "perfume/armani-terradigioia.jpg",    
-                "brand" => "Armani",
+                "brand_id" => 2,
                 "quantity" => 100,
                 "price" => "48.75",
                 "show" => true,         
@@ -138,7 +138,7 @@ class PerfumeSeeder extends Seeder
             [   
                 "name" => "My Way",    
                 "cover_img" => "perfume/armani-myway.jpg",    
-                "brand" => "Armani",
+                "brand_id" => 2,
                 "quantity" => 80,
                 "price" => "26.99",
                 "show" => false,         
@@ -146,7 +146,7 @@ class PerfumeSeeder extends Seeder
             [   
                 "name" => "Code",    
                 "cover_img" => "perfume/armani-code.jpg",    
-                "brand" => "Armani",
+                "brand_id" => 2,
                 "quantity" => 120,
                 "price" => "36.99",
                 "show" => true,         
@@ -154,7 +154,7 @@ class PerfumeSeeder extends Seeder
             [   
                 "name" => "Stronger with You",    
                 "cover_img" => "perfume/armani-strongerwithyou.jpg",    
-                "brand" => "Armani",
+                "brand_id" => 2,
                 "quantity" => 150,
                 "price" => "80.98",
                 "show" => true,         
@@ -162,7 +162,7 @@ class PerfumeSeeder extends Seeder
             [   
                 "name" => "Eau de nuit",    
                 "cover_img" => "perfume/armani-eaudenuit.jpg",    
-                "brand" => "Armani",
+                "brand_id" => 2,
                 "quantity" => 120,
                 "price" => "37.49",
                 "show" => true,         
@@ -170,7 +170,7 @@ class PerfumeSeeder extends Seeder
             [   
                 "name" => "Eau d'aromes",    
                 "cover_img" => "perfume/armani-eaudaromes.jpg",    
-                "brand" => "Armani",
+                "brand_id" => 2,
                 "quantity" => 100,
                 "price" => "70.29",
                 "show" => true,         
@@ -178,7 +178,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "Terre d'Hermes",
                 "cover_img" => "perfume/hermes-terredhermes.jpg",
-                "brand" => "Hermes",
+                "brand_id" => 3,
                 "quantity" => 50,
                 "price" => "19.99",
                 "show" => true,
@@ -186,7 +186,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "H24",
                 "cover_img" => "perfume/hermes-h24.jpg",
-                "brand" => "Hermes",
+                "brand_id" => 3,
                 "quantity" => 100,
                 "price" => "45.79",
                 "show" => false,
@@ -194,7 +194,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "Eau Givrée",
                 "cover_img" => "perfume/hermes-eaugivree.jpg",
-                "brand" => "Hermes",
+                "brand_id" => 3,
                 "quantity" => 100,
                 "price" => "30.46",
                 "show" => true,
@@ -202,7 +202,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "Intense Vetivér",
                 "cover_img" => "perfume/hermes-intensevetiver.jpg",
-                "brand" => "Hermes",
+                "brand_id" => 3,
                 "quantity" => 100,
                 "price" => "22.46",
                 "show" => false,
@@ -210,7 +210,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "Twilly",
                 "cover_img" => "perfume/hermes-twilly.jpg",
-                "brand" => "Hermes",
+                "brand_id" => 3,
                 "quantity" => 100,
                 "price" => "30.35",
                 "show" => true,
@@ -218,7 +218,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "Voyage",
                 "cover_img" => "perfume/hermes-voyage.jpg",
-                "brand" => "Hermes",
+                "brand_id" => 3,
                 "quantity" => 100,
                 "price" => "48.58",
                 "show" => true,
@@ -226,7 +226,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "Un Jardin Sur Le Nil",
                 "cover_img" => "perfume/hermes-jardinsurlenil.jpg",
-                "brand" => "Hermes",
+                "brand_id" => 3,
                 "quantity" => 100,
                 "price" => "41.99",
                 "show" => true,
@@ -234,7 +234,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "Un Jardin Sur Le Toit",
                 "cover_img" => "perfume/hermes-jardinsurletoit.jpg",
-                "brand" => "Hermes",
+                "brand_id" => 3,
                 "quantity" => 60,
                 "price" => "64.89",
                 "show" => true,
@@ -242,7 +242,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "Un Jardin Après la Mousson",
                 "cover_img" => "perfume/hermes-jardinmousson.jpg",
-                "brand" => "Hermes",
+                "brand_id" => 3,
                 "quantity" => 80,
                 "price" => "32.35",
                 "show" => false,
@@ -250,7 +250,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "Un Jardin Sur La Lagune",
                 "cover_img" => "perfume/hermes-jardinlagune.jpg",
-                "brand" => "Hermes",
+                "brand_id" => 3,
                 "quantity" => 120,
                 "price" => "37.55",
                 "show" => true,
@@ -258,7 +258,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "Light Blue",
                 "cover_img" => "perfume/deg-lightblue.jpg",
-                "brand" => "Dolce&Gabbana",
+                "brand_id" => 4,
                 "quantity" => 100,
                 "price" => "37.99",
                 "show" => true,
@@ -266,7 +266,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "Light Blue Intense",
                 "cover_img" => "perfume/deg-lightblueintense.jpg",
-                "brand" => "Dolce&Gabbana",
+                "brand_id" => 4,
                 "quantity" => 100,
                 "price" => "57.39",
                 "show" => true,
@@ -274,7 +274,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "Dolce",
                 "cover_img" => "perfume/deg-dolce.jpg",
-                "brand" => "Dolce&Gabbana",
+                "brand_id" => 4,
                 "quantity" => 100,
                 "price" => "61.14",
                 "show" => true,
@@ -282,7 +282,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "Dolce Shine",
                 "cover_img" => "perfume/deg-dolceshine.jpg",
-                "brand" => "Dolce&Gabbana",
+                "brand_id" => 4,
                 "quantity" => 120,
                 "price" => "38.99",
                 "show" => false,
@@ -290,7 +290,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "The One",
                 "cover_img" => "perfume/deg-theone.jpg",
-                "brand" => "Dolce&Gabbana",
+                "brand_id" => 4,
                 "quantity" => 100,
                 "price" => "51.99",
                 "show" => true,
@@ -298,7 +298,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "The Only One",
                 "cover_img" => "perfume/deg-theonlyone.jpg",
-                "brand" => "Dolce&Gabbana",
+                "brand_id" => 4,
                 "quantity" => 150,
                 "price" => "80.79",
                 "show" => true,
@@ -306,7 +306,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "L'Imperatrice",
                 "cover_img" => "perfume/deg-limperatrice.jpg",
-                "brand" => "Dolce&Gabbana",
+                "brand_id" => 4,
                 "quantity" => 80,
                 "price" => "45.49",
                 "show" => false,
@@ -314,7 +314,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "K",
                 "cover_img" => "perfume/deg-k.jpg",
-                "brand" => "Dolce&Gabbana",
+                "brand_id" => 4,
                 "quantity" => 150,
                 "price" => "99.99",
                 "show" => true,
@@ -322,7 +322,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "Pour Homme",
                 "cover_img" => "perfume/deg-pourhomme.jpg",
-                "brand" => "Dolce&Gabbana",
+                "brand_id" => 4,
                 "quantity" => 100,
                 "price" => "53.27",
                 "show" => false,
@@ -330,7 +330,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "The One For Men",
                 "cover_img" => "perfume/deg-theoneformen.jpg",
-                "brand" => "Dolce&Gabbana",
+                "brand_id" => 4,
                 "quantity" => 100,
                 "price" => "27.99",
                 "show" => true,
@@ -338,7 +338,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "Fame",
                 "cover_img" => "perfume/paco-fame.jpg",
-                "brand" => "Paco Rabanne",
+                "brand_id" => 5,
                 "quantity" => 80,
                 "price" => "38.99",
                 "show" => true,
@@ -346,7 +346,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "Olympéa",
                 "cover_img" => "perfume/paco-olympea.jpg",
-                "brand" => "Paco Rabanne",
+                "brand_id" => 5,
                 "quantity" => 120,
                 "price" => "32.99",
                 "show" => true,
@@ -354,7 +354,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "Lady Milion",
                 "cover_img" => "perfume/paco-ladymilion.jpg",
-                "brand" => "Paco Rabanne",
+                "brand_id" => 5,
                 "quantity" => 150,
                 "price" => "50.25",
                 "show" => false,
@@ -362,7 +362,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "Lady Milion Royal",
                 "cover_img" => "perfume/paco-ladymilionroyal.jpg",
-                "brand" => "Paco Rabanne",
+                "brand_id" => 5,
                 "quantity" => 100,
                 "price" => "65.78",
                 "show" => true,
@@ -370,7 +370,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "Phantom",
                 "cover_img" => "perfume/paco-phantom.jpg",
-                "brand" => "Paco Rabanne",
+                "brand_id" => 5,
                 "quantity" => 100,
                 "price" => "72.99",
                 "show" => true,
@@ -378,7 +378,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "Fabulous",
                 "cover_img" => "perfume/paco-fabulous.jpg",
-                "brand" => "Paco Rabanne",
+                "brand_id" => 5,
                 "quantity" => 80,
                 "price" => "44.25",
                 "show" => true,
@@ -386,7 +386,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "One Milion",
                 "cover_img" => "perfume/paco-onemilion.jpg",
-                "brand" => "Paco Rabanne",
+                "brand_id" => 5,
                 "quantity" => 120,
                 "price" => "61.99",
                 "show" => false,
@@ -394,7 +394,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "Invictus",
                 "cover_img" => "perfume/paco-invictus.jpg",
-                "brand" => "Paco Rabanne",
+                "brand_id" => 5,
                 "quantity" => 100,
                 "price" => "50.19",
                 "show" => true,
@@ -402,7 +402,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "One Milion Lucky",
                 "cover_img" => "perfume/paco-onemilionlucky.jpg",
-                "brand" => "Paco Rabanne",
+                "brand_id" => 5,
                 "quantity" => 80,
                 "price" => "35.99",
                 "show" => false,
@@ -410,7 +410,7 @@ class PerfumeSeeder extends Seeder
             [
                 "name" => "Pure XS",
                 "cover_img" => "perfume/paco-purexs.jpg",
-                "brand" => "Paco Rabanne",
+                "brand_id" => 5,
                 "quantity" => 30,
                 "price" => "43.99",
                 "show" => true,
@@ -422,7 +422,7 @@ class PerfumeSeeder extends Seeder
             $newperfume->name = $perfume['name'];
             $newperfume->slug = Helpers::generateSlug($newperfume->name);
             $newperfume->quantity = $perfume['quantity'];
-            $newperfume->brand = $perfume['brand'];
+            $newperfume->brand_id = $perfume['brand_id'];
             $newperfume->cover_img = $perfume['cover_img'];
             $newperfume->price = $perfume['price'];
             $newperfume->show = $perfume['show'];

@@ -5,7 +5,7 @@
             <div>
                 <h3 class="fs-4 green-text mt-4">Welcome <strong> {{ Auth::user()->username }}</h3>
             </div>
-            @if ( Auth::user()->isAdmin == 1 )
+            @isset ( Auth::user()->isAdmin )
             <div class="dropdown">
                 <button class="btn btn-success dropdown-toggle fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Actions
@@ -14,7 +14,7 @@
                 <div class="dropdown-menu bg-success">
                     @if ($perfumes->count() > 0)
                     <a class="dropdown-item text-center py-2 text-white" id='style-links' href="{{ route('perfumes.index') }}">
-                        Shop
+                        Perfumes
                     </a>
                     @endif
                     <a class="dropdown-item text-center py-2 text-white" id='style-links' href="{{ route('perfumes.create') }}">
@@ -22,7 +22,7 @@
                     </a>
                 </div>
             </div>    
-            @endif    
+            @endisset    
         </div>
 
     </div>

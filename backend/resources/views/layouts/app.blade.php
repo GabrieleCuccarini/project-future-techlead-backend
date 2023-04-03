@@ -40,9 +40,11 @@
                             <b><a class="nav-link text-white" href="{{url('/') }}">{{ __('Home') }}</a></b>
                         </li>
                         
+                        @isset ( Auth::user()->isAdmin )
                         <li class="nav-item">
                             <b><a class="nav-link text-white" href="{{ url('perfumes')}}">{{ __('Perfumes') }}</a></b>
                         </li>
+                        @endisset
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -82,9 +84,9 @@
             </div>
         </nav>
 
-        <main class="">
+        <div class="">
             @yield('content')
-        </main>
+        </div>
     </div>
 </body>
 

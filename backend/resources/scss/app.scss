@@ -16,6 +16,12 @@
     aspect-ratio: 1 / 1;
 }
 
+.max200 {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+
 .home-jumbo {
     width: 95vw;
     height: 95vh;
@@ -32,4 +38,8 @@
 
 .m-left {
     margin-left: 12px;
+}
+
+.row.bg-add {
+    background-color: paleturquoise;
 }

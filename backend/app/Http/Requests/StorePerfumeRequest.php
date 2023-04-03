@@ -24,7 +24,7 @@ class StorePerfumeRequest extends FormRequest
         return [
             'name' => 'required|max:255|string',
             'cover_img' => 'required|image',
-            'brand' => 'required|max:255|string',
+            'brand_id' => 'required|numeric|min:0',
             'quantity' => 'required|numeric|min:0',
             'price' => 'required|numeric|min:0',
             'show' => 'nullable|boolean',

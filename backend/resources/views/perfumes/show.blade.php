@@ -18,7 +18,18 @@
                         <div class="card-body">
                             <h5 class="card-title"><b>ID: </b>{{ $perfume->id }}</h5>
                             <h5 class="card-title"><b>Name: </b>{{ $perfume->name }}</h5>
-                            <p class="card-text"><b>Brand: </b>{{ $perfume->brand }}</p>
+                            <p class="card-text"><b>Brand: </b>
+                                @if ($perfume->brand_id == 1)
+                                Calvin Klein
+                                @elseif ($perfume->brand_id == 2)
+                                Armani
+                                @elseif ($perfume->brand_id == 3)
+                                Hermes
+                                @elseif ($perfume->brand_id == 4)
+                                Dolce&Gabbana
+                                @elseif ($perfume->brand_id == 5)
+                                Paco Rabanne
+                                @endif                            </p>
                             <p class="card-text"><b>Quantity: </b>{{ $perfume->quantity }} ml</p>
                             <p class="card-text"><b>Price: <span class='text-danger'>€{{$perfume->price}}</span></b></p>
                             <p><b>Show: </b>{{ $perfume->show == 1 ? 'on' : 'off' }}</p>

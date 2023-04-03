@@ -24,7 +24,7 @@ class UpdatePerfumeRequest extends FormRequest
         return [
             'name' => 'required|max:255|string',
             'cover_img' => 'image',
-            'brand' => 'required|max:255|string',
+            'brand_id' => 'required|numeric|min:1',
             'quantity' => 'required|numeric|min:0',
             'price' => 'required|numeric|min:0',
             'show' => 'nullable|boolean',

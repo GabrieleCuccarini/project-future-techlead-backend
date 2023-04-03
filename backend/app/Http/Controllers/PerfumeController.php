@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Perfume;
+use App\Models\Brand;
 use App\Models\User;
 use App\Http\Requests\StorePerfumeRequest;
 use App\Http\Requests\UpdatePerfumeRequest;
@@ -11,7 +12,6 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rules\Exists;
-use App\Functions\Helpers;
 
 // ROTTE ADMIN IN QUESTO CONTROLLER 
 class PerfumeController extends Controller
@@ -22,9 +22,10 @@ class PerfumeController extends Controller
         public function index()
         {
             $user = Auth::user();
-            $perfumes = Perfume::all();
+            $brands = Brand::all();
+            $perfumes = Perfume::paginate();
             // dd($perfumes);
-            return view('perfumes.index', compact('perfumes'));
+            return view('perfumes.index', compact('perfumes','brands'));
         }
     
         /**
@@ -32,10 +33,9 @@ class PerfumeController extends Controller
          */
         public function create()
         {
-            $user = Auth::user();
-            if ($user->isAdmin == 0) {
-                abort(403);
-            }
+            // if ($user->isAdmin == 0) {
+            //     abort(403);
+            // }
 
             return view('perfumes.create');
         }
@@ -46,9 +46,7 @@ class PerfumeController extends Controller
         public function store(StorePerfumeRequest $request)
         {
             $user = Auth::user();
-            if ($user->isAdmin == 0) {
-                abort(403);
-            }
+
             $data = $request->validated();
             
             // SET UP DI SLUG E PATH 
@@ -65,7 +63,7 @@ class PerfumeController extends Controller
             $perfume->cover_img = $path;
             $perfume->name = $data['name'];
             $perfume->slug =  $slug;
-            $perfume->brand = $data['brand'];
+            $perfume->brand_id = $data['brand_id'];
             $perfume->quantity = $data['quantity'];
             $perfume->price = $data['price'];
             $perfume->show = $data['show'];
@@ -81,9 +79,6 @@ class PerfumeController extends Controller
         public function show($slug)
         {
             $user = Auth::user();
-            if ($user->isAdmin == 0) {
-                abort(403);
-            }
 
             $perfume_array = Perfume::where('slug', $slug)->get();
             $perfume = $perfume_array[0];
@@ -99,9 +94,6 @@ class PerfumeController extends Controller
         public function edit($slug)
         {
             $user = Auth::user();
-            if ($user->isAdmin == 0) {
-                abort(403);
-            }
 
             $perfume_array = Perfume::where('slug', $slug)->get();
             $perfume = $perfume_array[0];
@@ -116,9 +108,6 @@ class PerfumeController extends Controller
         public function update(UpdatePerfumeRequest $request, $slug)
         {
             $user = Auth::user();
-            if ($user->isAdmin == 0) {
-                abort(403);
-            }
 
             $data = $request->validated();
             $slug = Perfume::getSlug($request->name);
@@ -145,7 +134,7 @@ class PerfumeController extends Controller
             }
             
             $perfume->update(['name' => $request['name']]);
-            $perfume->update(['brand' => $request['brand']]);
+            $perfume->update(['brand_id' => $request['brand_id']]);
             $perfume->update(['quantity' => $request['quantity']]);
             $perfume->update(['price' => $request['price']]);
             // dd($perfume, $data);
@@ -159,9 +148,6 @@ class PerfumeController extends Controller
         public function destroy($slug)
             {
                 $user = Auth::user();
-                if ($user->isAdmin == 0) {
-                    abort(403);
-                }
 
                 $perfume_array = Perfume::where('slug', $slug)->get(); 
                 $perfume = $perfume_array[0];           

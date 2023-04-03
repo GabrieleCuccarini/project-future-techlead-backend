@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\PerfumeController;
+use App\Http\Controllers\Api\BrandController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get("/perfumes", [PerfumeController::class, "index"]);
 Route::get("/perfumes/{slug}", [PerfumeController::class, "show"]);
+Route::get("/brands", [BrandController::class, "index"]);

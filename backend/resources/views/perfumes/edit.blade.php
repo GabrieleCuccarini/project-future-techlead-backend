@@ -61,8 +61,24 @@
                     {{-- INPUT BRAND --}}
                     <div class="col-12">
                         <label for="brand" class="form-label">Brand</label>
-                        <input type="text" class="form-control  @error('brand') is-invalid @enderror" name="brand"
-                            value="{{ old('brand', $perfume->brand) }}">
+                        <select name="brand" id="brand-select" class='mx-4'>
+                            <option value="1" <?php if ($perfume->brand_id == 1) {
+                                echo 'selected';
+                            } ?>>Calvin Klein</option>
+                            <option value="2" <?php if ($perfume->brand_id == 2) {
+                                echo 'selected';
+                            } ?>>Armani</option>
+                            <option value="3" <?php if ($perfume->brand_id == 3) {
+                                echo 'selected';
+                            } ?>>Hermes</option>
+                            <option value="4" <?php if ($perfume->brand_id == 4) {
+                                echo 'selected';
+                            } ?>>Dolce &amp; Gabbana</option>
+                            <option value="5" <?php if ($perfume->brand_id == 5) {
+                                echo 'selected';
+                            } ?>>Paco Rabanne</option>
+                        </select>
+                        <input type="hidden" name="brand_id" id="brand-input" value="<?php echo $perfume->brand_id; ?>">
 
                         {{-- Messaggio  --}}
                         @error('brand')
@@ -147,6 +163,14 @@
                 checkBox.value = 0; // Imposta il valore a false
             }
         }
+
+        const brandSelect = document.getElementById('brand-select');
+        const brandInput = document.getElementById('brand-input');
+
+        brandSelect.addEventListener('change', (event) => {
+            const selectedOption = event.target.value;
+            brandInput.value = selectedOption;
+        });
     </script>
 
     {{-- <!-- Javascript Requirements -->

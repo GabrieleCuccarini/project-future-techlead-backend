@@ -40,28 +40,32 @@
         {{-- INPUT IMMAGINE --}}
                 <div class="col-md-6 col-sm-12">
                     <label for="" class="form-label">Cover Image * </label>
-                    <input type="file"  class="form-control @error('cover_img') is-invalid @elseif('cover_img')  @enderror" name="cover_img" >
+                    <input type="file" id='my-file-input' class="form-control file @error('cover_img') is-invalid @elseif('cover_img') @enderror" name="cover_img" data-browse="Choose file" data-placeholder="No file selected" lang='en' accept=".jpg, .jpeg, .png">
                     {{-- Messaggio  --}}
 
                     @error('cover_img')
                     <div class="invalid-feedback">
                         {{ $message }}
-                    </div>
-                
+                    </div>                
                     @enderror
                 </div>
 
         {{-- INPUT DESCRIZIONE --}}
                 <div class="col-12">
-                    <label for="text" class="form-label">Brand *</label>
-                    <input type="text" class="form-control  @error('brand') is-invalid @enderror" placeholder="Brand name" name="brand">{{ old('brand') }}
-
+                    <label for="brand_id" class="form-label">Brand *</label>
+                    <select name="brand_id" class='mx-4'>
+                        <option value="1">Calvin Klein</option>
+                        <option value="2">Armani</option>
+                        <option value="3">Hermes</option>
+                        <option value="4">Dolce &amp; Gabbana</option>
+                        <option value="5">Paco Rabanne</option>
+                    </select>
                     {{-- Messaggio  --}}
-                    @error('description')
+                    @error('brand_id')
                     <div class="invalid-feedback">
                         {{ $message }}
                     </div>
-                    @elseif(old('description'))
+                    @elseif(old('brand_id'))
                     <div class="valid-feedback">
                         Well done!
                     </div>
@@ -71,15 +75,15 @@
 
             {{-- INPUT INGREDIENTS--}}
                 <div class="col-12">
-                    <label for="quantity" class="form-label">Quantity *</label>
-                    <input type="number" step='1' class="form-control  @error('ingredients') is-invalid @enderror" placeholder="Quantity (In Ml)" name="quantity">{{ old('quantity') }}</>
+                    <label for="" class="form-label">Quantity *</label>
+                    <input type="number" step='1' class="form-control  @error('quantity') is-invalid @enderror" placeholder="Quantity (In Ml)" name="quantity">{{ old('quantity') }}</>
 
                     {{-- Messaggio  --}}
-                    @error('ingredients')
+                    @error('quantity')
                     <div class="invalid-feedback">
                         {{ $message }}
                     </div>
-                    @elseif(old('ingredients'))
+                    @elseif(old('quantity'))
                     <div class="valid-feedback">
                         Well done!
                     </div>
@@ -139,15 +143,6 @@
   } else {
     checkBox.value = 0; // Imposta il valore a false
   }
-}
+};
 </script>
-    {{-- <!-- Javascript Requirements -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
-
-    <!-- Laravel Javascript Validation -->
-    <script type="text/javascript" src="{{ asset('vendor/jsvalidation/js/jsvalidation.js') }}"></script>
-
-    {!! JsValidator::formRequest('App\Http\Requests\StorePerfumeRequest') !!} --}}
-
 @endsection
